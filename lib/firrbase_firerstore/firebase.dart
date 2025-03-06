@@ -17,6 +17,7 @@ void addUser(String name,int age){
 
 void fetchUsers()async{
 
+
   QuerySnapshot snapshot = await FirebaseFirestore.instance.collection("users").get();
   for(var doc in snapshot.docs){
     print(doc["name"]);
